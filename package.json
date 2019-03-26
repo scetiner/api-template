@@ -1,0 +1,35 @@
+{
+  "name": "entity-service",
+  "version": "1.0.0",
+  "description": "This is a starter template for a NodeJs REST service",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "api": "node api_gen",
+    "test": "jest --forceExit --runInBand --detectOpenHandles --verbose"
+  },
+  "author": "scetiner",
+  "license": "ISC",
+  "dependencies": {
+    "await-to-js": "2.1.1",
+    "axios": "0.18.0",
+    "basic-auth": "^1.1.0",
+    "body-parser": "1.18.3",
+    "express": "4.16.4",
+    "express-list-endpoints": "^4.0.0",
+    "helmet": "3.16.0",
+    "joi": "14.3.1",
+    "lodash": "4.17.11",
+    "log4js": "4.0.2",
+    "mysql": "2.16.0",
+    "uuid": "3.3.2"
+  },
+  "devDependencies": {
+    "jest": "24.5.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/*_test.js"
+    ]
+  }
+}
