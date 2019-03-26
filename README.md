@@ -43,9 +43,11 @@ Lastest version is tested on [Node.js](https://nodejs.org/) v11+.
 $ cd api-template
 $ npm install -d
 ```
-2 - Create your database with your schema, there is sample under **/etc/1.0.0_db_changes**
+2 - Create your database with your schema, there is a sample under **/etc/1.0.0_db_changes**
+
 3 - Set your environment variables, check **/src/utils/config_manager.js**
-4 - Create your first entity
+
+4 - Create your first entity 
 
 ```sh
 $ npm run api User
@@ -64,7 +66,9 @@ Following files are created for User
  
 
 5 - Define your schema for validation in **src/apis/user/user_schema.js**
+
 6 - Assign your router to app, in **src/apis/index.js**
+
 7 - Run your tests
 ```sh
 $ npm test
