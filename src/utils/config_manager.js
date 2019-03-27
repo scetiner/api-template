@@ -11,7 +11,7 @@ module.exports = class ConfigManager {
 
     _getMysqlConfigs() {
         let mysql = {};
-        mysql.database = "entity_service";
+        mysql.database = "api_entities";
         mysql.connectionLimit = process.env.ENTITY_SERVICE_MYSQL_CONNECTION_LIMIT || 10;
         mysql.queueLimit = process.env.ENTITY_SERVICE_MYSQL_QUEUE_LIMIT || 10;
         mysql.host = process.env.ENTITY_SERVICE_MYSQL_HOST || "localhost";

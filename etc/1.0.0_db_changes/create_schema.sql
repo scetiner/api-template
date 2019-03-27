@@ -1,5 +1,5 @@
-CREATE SCHEMA `entity_service` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-use `entity_service`;
+CREATE SCHEMA `api_entities` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+use `api_entities`;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
