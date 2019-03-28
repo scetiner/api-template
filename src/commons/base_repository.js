@@ -24,9 +24,25 @@ module.exports = class BaseRepository {
     return await this._db.executeQuery(query);
   }
 
-  async getAll(limit = 100) {
+  async getAll(queryParams) {
+    let limit = queryParams.pageSize || 100;
+
+    let keys = SchemaConverter.getSchemaKeys(this._schema);
+    let setKeys = [], values = [];    
+
+    for(let k of keys){
+      if(queryParams.hasOwnProperty(k)){
+        setKeys.push(k);
+        values.push(queryParams[k]);
+      }
+    }
+    let where =setKeys.length>0? this.formatSql(
+      ` where ${setKeys.join("=? AND ")}=? `,
+      values
+    ) : '';
+
     let query = mysql.format(
-      `select * from ${this._tableName} order by updated_at desc limit ?`,
+      `select * from ${this._tableName} ${where} order by updated_at desc limit ?`,
       [limit]
     );
     return await this.execute(query);
