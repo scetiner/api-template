@@ -38,8 +38,8 @@ module.exports = class BaseController {
 
   async index(req, res, next) {
     try {
-      let limit = req.query.pageSize || 100;
-      const [err, data] = await to(this._repository.getAll(limit));
+      let queryParams = req.query;
+      const [err, data] = await to(this._repository.getAll(queryParams));
       ErrorHandler.handleError(err);
 
       return res.status(200).json(data);
