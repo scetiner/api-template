@@ -13,7 +13,7 @@ const {to} = require('await-to-js');
 
 
 describe("__nameCapital__ API test", async () => {
-    const app = require('../../../../app');
+    const app = require('../../../app');
     const service = axios.create({
         auth: {
           username: global.conf.authentication.admin.username,
